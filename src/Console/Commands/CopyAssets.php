@@ -80,7 +80,6 @@ abstract class CopyAssets extends Command {
      */
     protected function deleteFile($path) {
         if (is_file($path)) {
-            chmod($path, 666);
             return unlink($path);
         }
 
